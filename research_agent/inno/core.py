@@ -527,7 +527,7 @@ class MetaChain:
                 break
 
             if enter_agent.tool_choice != "required":
-                if (not message.tool_calls and active_agent.name == enter_agent.name) or not execute_tools:
+                if not message.tool_calls and active_agent.name == enter_agent.name:
                     self.logger.info("Ending turn.", title="End Turn", color="red")
                     break
             else: 
